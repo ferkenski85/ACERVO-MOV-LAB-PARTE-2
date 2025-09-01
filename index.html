@@ -1,113 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximas Aulas</title>
-    <!-- Adicione o link para a biblioteca de ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MOV LAB - Aulas</title>
+    <!-- Links para o Tailwind CSS e Font Awesome (ícones) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        /* Estilos gerais para a página */
+        /* Adicionando a mesma fonte e fundo das outras páginas para consistência */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
         }
-
-        /* Estilo do contêiner principal das aulas */
-        .container-aulas {
-            max-width: 960px;
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        h1 {
-            color: #444;
-            margin-bottom: 40px;
-        }
-
-        /* Flexbox para alinhar os ícones das aulas */
-        .aulas-grid {
-            display: flex;
-            justify-content: center; /* Centraliza os itens no contêiner */
-            gap: 20px; /* Espaçamento entre os ícones */
-            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
-        }
-
-        /* Estilo individual de cada aula */
-        .aula-item {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 25px;
-            width: 200px; /* Largura fixa para cada item */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .aula-item:hover {
-            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-        }
-
-        /* Estilo dos ícones */
-        .aula-icone {
-            font-size: 50px;
-            color: #007bff; /* Cor do ícone */
-            margin-bottom: 15px;
-        }
-
-        /* Estilo do título da aula */
-        .aula-titulo {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
     </style>
 </head>
-<body>
+<body class="flex items-center justify-center min-h-screen">
 
-    <div class="container-aulas">
-        <h1>Próximas Aulas</h1>
-        <div class="aulas-grid">
-            <!-- Aula 13 -->
-            <div class="aula-item">
-                <div class="aula-icone">
-                    <!-- Ícone representando "despertar" ou "mente" -->
-                    <i class="fas fa-brain"></i>
-                </div>
-                <div class="aula-titulo">
-                    AULA 13: O Despertar da Propriocepção
-                </div>
-            </div>
+    <div class="container mx-auto p-8 text-center">
+        
+        <!-- Título Principal -->
+        <h1 class="text-4xl font-bold text-gray-800 mb-12">
+            Próximas Aulas
+        </h1>
 
-            <!-- Aula 14 -->
-            <div class="aula-item">
-                <div class="aula-icone">
-                    <!-- Ícone representando "engrenagem" ou "articulação" -->
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="aula-titulo">
-                    AULA 14: A Engrenagem do Quadril
-                </div>
-            </div>
+        <!-- Grade com os Cards das Aulas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            <!-- Aula 15 -->
-            <div class="aula-item">
-                <div class="aula-icone">
-                    <!-- Ícone representando "coluna" ou "esculpir" -->
-                    <i class="fas fa-bone"></i>
+            <!-- Card Aula 13 -->
+            <a href="aula13.html" class="block transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center justify-center">
+                    <i class="fas fa-brain text-5xl text-blue-500 mb-6"></i>
+                    <h2 class="text-xl font-semibold text-gray-900">
+                        AULA 13: O Despertar da Propriocepção
+                    </h2>
                 </div>
-                <div class="aula-titulo">
-                    AULA 15: Esculpindo a Coluna
+            </a>
+
+            <!-- Card Aula 14 -->
+            <a href="aula14.html" class="block transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center justify-center">
+                    <i class="fas fa-cogs text-5xl text-blue-500 mb-6"></i>
+                    <h2 class="text-xl font-semibold text-gray-900">
+                        AULA 14: A Engrenagem do Quadril
+                    </h2>
                 </div>
-            </div>
+            </a>
+
+            <!-- Card Aula 15 -->
+            <a href="aula15.html" class="block transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center justify-center">
+                    <i class="fas fa-bone text-5xl text-blue-500 mb-6"></i>
+                    <h2 class="text-xl font-semibold text-gray-900">
+                        AULA 15: Esculpindo a Coluna
+                    </h2>
+                </div>
+            </a>
+
         </div>
+
     </div>
 
 </body>
